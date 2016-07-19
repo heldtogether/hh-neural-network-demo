@@ -38,22 +38,16 @@ func main() {
 
 	fmt.Printf("Before training using the \"xor\" pattern.\n")
 
-	input = []float64{0, 0}
-	fmt.Printf("Try Input: %v. Output: %v. \n", input, ff.Update(input)[0])
-
-	input = []float64{0, 1}
-	fmt.Printf("Try Input: %v. Output: %v. \n", input, ff.Update(input)[0])
-
-	input = []float64{1, 0}
-	fmt.Printf("Try Input: %v. Output: %v. \n", input, ff.Update(input)[0])
-
-	input = []float64{1, 1}
-	fmt.Printf("Try Input: %v. Output: %v. \n", input, ff.Update(input)[0])
+	printResults(ff)
 
 	ff.Train(patterns, rounds, learningRate, 0.4, false)
 
-	fmt.Printf("After traineing with %d number of rounds using the \"xor\" pattern.\n", rounds)
+	fmt.Printf("After training with %d number of rounds using the \"xor\" pattern.\n", rounds)
 
+	printResults(ff)
+}
+
+func printResults(ff *gobrain.FeedForward) {
 	input = []float64{0, 0}
 	fmt.Printf("Try Input: %v. Output: %v. \n", input, ff.Update(input)[0])
 
