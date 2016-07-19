@@ -20,7 +20,7 @@ var (
 func init() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	flag.IntVar(&rounds, "rounds", 100, "Number of rounds of training to perform.")
+	flag.IntVar(&rounds, "rounds", 1000, "Number of rounds of training to perform.")
 	flag.Parse()
 }
 

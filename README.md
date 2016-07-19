@@ -12,7 +12,7 @@ In your GOPATH, run
 
 to download the app. Then run
 
-	cd $GOPATH/src/github.com/heldtogether/hh-neural-network-demo 
+	cd $GOPATH/src/github.com/heldtogether/hh-neural-network-demo
 	go get -t ./...
 
 to download all dependencies.
@@ -26,8 +26,8 @@ Finally, install the app with
 
 Run the app using
 
-	hh-neural-network-demo [-rounds=100]
+	hh-neural-network-demo [-rounds=1000]
 
 Available flags:
 
-`-rounds`: Number of rounds of training to perform. The default is 100.
+`-rounds`: Number of rounds of training to perform. The default is 1000.
